@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Caveat", serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    background-image: url(/assets/images/background.png); background-size: contain;
+    background-attachment: scroll;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+h2,
+h3 {
+    font-family: "Bebas Neue", serif;
+    color: #3E7B27;
+}
+
+.profile header {
+    text-align: center;
+  }
+   
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile img {
+    max-width: 200px;
+}
+   
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+
+.card, .berita {
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+   
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+   
+aside {
+    flex: 1;;
+}
+
+aside, h2 {
+    text-align: center;
+}
+
+aside img {
+    border-radius: 2px;
+}
+
+aside table {
+    text-align: left;
+}
+
+aside table td {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.next {
+    color: #3E7B27;
+}
+
+.next:hover {
+    color: #123524;
+}
+
+.berita img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+li {
+    list-style: none;
+}
+
+a, .berita {
+    text-decoration: none;
+    color: #3E7B27
+}
+
+a, .berita:hover {
+    color: #123524;
+}
+
+.header {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+
+.navbar {
+    background-color: #3E7B27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    position: sticky;
+    top: 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    font-family: "Bebas Neue", serif;
+    margin-left: 2rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #123524;
+}
+
+.nav-logo {
+    font-family: "Pacifico", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.jumbotron {
+    background-image: url('https://akcdn.detik.net.id/community/media/visual/2020/08/21/darmacaang-hill-ciamis-1_169.jpeg?w=700&q=90');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.jumbotron h1 {
+    font-family: "Pacifico", serif;
+    font-size: 3rem;
+    text-shadow: black 2px 2px 2px;
+    margin: 0;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+    text-shadow: black 2px 2px 2px;
+    margin: 0;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: #3E7B27;
+    text-align: center;
+    font-weight: bold;
+}
+  
+footer p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 3rem;
+        flex-direction: column;
+        background-color: #3E7B27;
+        width: 30%;
+        border-radius: 2px;
+        text-align: center;
+        transition: right 0.3s ease-in-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding-left: 0%;
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 0.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    main {
+        flex-flow: column nowrap;
+    }
+     
+    main aside {
+        align-self: center;
+    }
+}
